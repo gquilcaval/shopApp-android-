@@ -1,0 +1,17 @@
+<androidx.cardview.widget.CardView android:id="@+id/cardviewBanner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/slider_banner"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:iss_auto_cycle="true"
+        app:iss_period="2500"
+        app:iss_delay="0"/>
+</androidx.cardview.widget.CardView>

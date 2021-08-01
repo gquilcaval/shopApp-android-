@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">shopApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragmentA">Hello blank fragment A</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragmentB">Hello blank fragment B</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragmentC">Hello blank fragment C</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

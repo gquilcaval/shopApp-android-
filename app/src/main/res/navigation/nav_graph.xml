@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentInicio">
+
+    <fragment
+        android:id="@+id/fragmentInicio"
+        android:name="com.example.shopapp.FragmentInicio"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/nextAct"
+            app:destination="@id/fragmentCarrito" />
+        <action
+            android:id="@+id/action_fragmentInicio_to_fragmentBusqueda"
+            app:destination="@id/fragmentBusqueda" />
+        <action
+            android:id="@+id/action_fragmentInicio_to_dialogDetail"
+            app:destination="@id/dialogDetail" />
+        <action
+            android:id="@+id/action_fragmentInicio_to_categoriaProductsFragment"
+            app:destination="@id/categoriaProductsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCarrito"
+        android:name="com.example.shopapp.FragmentCarrito"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_carrito" >
+        <action
+            android:id="@+id/nextAct"
+            app:destination="@id/fragmentMiCuenta" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMiCuenta"
+        android:name="com.example.shopapp.FragmentMiCuenta"
+        android:label="fragment_c"
+        tools:layout="@layout/fragment_micuenta" >
+        <action
+            android:id="@+id/action_fragmentMiCuenta_to_dialogLogin"
+            app:destination="@id/dialogLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBusqueda"
+        android:name="com.example.shopapp.FragmentBusqueda"
+        android:label="fragment_busqueda"
+        tools:layout="@layout/fragment_busqueda" />
+    <dialog
+        android:id="@+id/dialogDetail"
+        android:name="com.example.shopapp.DialogDetail"
+        android:label="DialogDetail" >
+        <action
+            android:id="@+id/action_dialogDetail_to_fragmentInicio"
+            app:destination="@id/fragmentInicio" />
+        <action
+            android:id="@+id/action_dialogDetail_to_fragmentCarrito"
+            app:destination="@id/fragmentCarrito" />
+    </dialog>
+    <fragment
+        android:id="@+id/categoriaProductsFragment"
+        android:name="com.example.shopapp.CategoriaProductsFragment"
+        android:label="fragment_categoria_products"
+        tools:layout="@layout/fragment_categoria_products" >
+        <action
+            android:id="@+id/action_categoriaProductsFragment_to_fragmentInicio"
+            app:destination="@id/fragmentInicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/dialogLogin"
+        android:name="com.example.shopapp.viewmodels.DialogLogin"
+        android:label="DialogLogin" >
+        <action
+            android:id="@+id/action_dialogLogin_to_fragmentMiCuenta"
+            app:destination="@id/fragmentMiCuenta" />
+    </fragment>
+</navigation>
