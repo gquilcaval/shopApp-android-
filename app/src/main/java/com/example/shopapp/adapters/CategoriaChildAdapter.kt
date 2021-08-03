@@ -1,4 +1,4 @@
-package com.example.peliculasapp.adapters
+package com.example.shopapp.adapters
 
 import android.os.Bundle
 import android.view.LayoutInflater

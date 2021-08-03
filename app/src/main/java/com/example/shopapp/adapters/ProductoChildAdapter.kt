@@ -1,4 +1,4 @@
-package com.example.peliculasapp.adapters
+package com.example.shopapp.adapters
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,8 +13,8 @@ import com.example.shopapp.databinding.CardviewProductoBinding
 import com.example.shopapp.entities.Productos
 
 
-class PeliculaChildAdapter(private val peliculas: List<Productos>)
-    : RecyclerView.Adapter<PeliculaChildAdapter.ViewHolder>(){
+class ProductoChildAdapter(private val peliculas: List<Productos>)
+    : RecyclerView.Adapter<ProductoChildAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)
             : ViewHolder {

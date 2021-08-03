@@ -116,7 +116,7 @@
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_weight="1"
-                            style="@style/imageButton_variant"
+                            style="@style/imageButton_principal"
                             android:background="@drawable/background_button_rounded"
                             android:adjustViewBounds="true"
                             android:padding="5dp"
@@ -140,7 +140,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/background_button_rounded"
                             android:padding="5dp"
-                            style="@style/imageButton_variant"
+                            style="@style/imageButton_principal"
                             android:adjustViewBounds="true"
                             android:scaleType="centerInside"
                             android:src="@drawable/btn_agregar"
@@ -201,7 +201,7 @@
                 android:gravity="center"
                 android:orientation="vertical">
                 <ImageButton
-                    style="@style/imageButton_variant"
+                    style="@style/imageButton_principal"
                     android:id="@+id/btnShop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -213,7 +213,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="agregar"
-                    style="@style/Widget.MyTheme.Text_variant"
+                    style="@style/texview_variant"
                     />
 
             </LinearLayout>

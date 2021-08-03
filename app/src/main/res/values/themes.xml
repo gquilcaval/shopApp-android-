@@ -7,20 +7,23 @@
     <style name="Base.MyTheme" parent="Base.MaterialThemeBuilder">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/color_primary</item>
-        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
+        <item name="colorPrimaryVariant">@color/color_secondary</item>
         <item name="colorOnPrimary">@color/color_text_primary</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/color_secondary</item>
         <item name="colorSecondaryVariant">@color/color_secondary_variant</item>
         <item name="colorOnSecondary">@color/color_text_secondary</item>
 
-        <item name="android:background">@color/color_background</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="snackbarStyle">@style/Widget.App.Snackbar</item>
+        <item name="snackbarButtonStyle">@style/Widget.App.SnackbarButton</item>
+        <item name="colorOnSurface">@color/color_surface</item>
         <item name="colorSurface">@color/color_surface</item>
         <item name="imageButtonStyle">@style/Widget.MyTheme.ImageButton</item>
         <item name="materialButtonStyle">@style/ButtonStyle</item>
         <item name="fontFamily">@font/asul</item>
 
-        
+        <item name="bottomNavigationStyle">@style/MebottomNavigation</item>
 
 
         <!-- Customize your theme here. -->
@@ -31,37 +34,51 @@
         <item name="android:statusBarColor" tools:targetApi="l">@color/color_secondary</item>
     </style>
 
+    <!-- estilo de botones principal -->
     <style name="ButtonStyle" parent="Widget.MaterialComponents.Button">
         <item name="android:textColor">@color/color_text_secondary</item>
         <item name="backgroundTint">@color/color_secondary</item>
         <item name="iconTint">@color/color_primary</item>
 
     </style>
+
+    <!-- estilo de imageButton default -->
     <style name="Widget.MyTheme.ImageButton" parent="Widget.AppCompat.ImageButton">
         <item name="android:background">@null</item>
 
 
     </style>
-    <style name="imageButton_variant">
+
+    <!-- estilo de imageButton principal -->
+    <style name="imageButton_principal">
         <item name="backgroundTint">@color/color_secondary</item>
         <item name="tint">@color/color_primary</item>
 
-
     </style>
-    <style name="Widget.MyTheme.Text_variant" parent="Widget.AppCompat.TextView">
 
+    <!-- estilo de nombre de  imagebutton -->
+
+    <style name="texview_variant">
         <item name="android:textColor">@color/color_secondary</item>
+
+
     </style>
 
+
+    <!-- estilo del precio del producto -->
     <style name="texviewPrecio">
         <item name="android:textColor">@color/rojo_intenso</item>
         <item name="android:textSize">17sp</item>
     </style>
+
+    <!-- estilo de nombre del producto -->
     <style name="texviewNomProducto">
 
         <item name="android:textColor">@color/color_text_primary</item>
         <item name="android:textSize">16sp</item>
     </style>
+
+    <!-- estilo de buttonGuardarDespues -->
     <style name="buttonGuardarDespues" parent="Widget.MaterialComponents.Button.OutlinedButton" >
         <item name="android:textColor">@color/verde_1</item>
         <item name="strokeColor">@color/verde_1</item>
@@ -71,4 +88,31 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <!-- estilo de bottomNavigation -->
+    <style name="MebottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView" >
+        <item name="android:background">@color/color_secondary</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+    <style name="Widget.App.Snackbar" parent="Widget.MaterialComponents.Snackbar">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Snackbar</item>
+        <item name="actionTextColorAlpha">1</item>
+    </style>
+
+    <style name="Widget.App.SnackbarButton" parent="Widget.MaterialComponents.Button.TextButton.Snackbar">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Snackbar" parent="">
+        <item name="colorPrimary">@color/color_secondary</item>
+        <item name="colorOnSurface">@color/color_secondary</item>
+    </style>
 </resources>

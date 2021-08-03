@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         var badge = binding.bottomNavigation.getOrCreateBadge(R.id.fragmentCarrito)
         badge.isVisible = true
-// An icon only badge will be displayed unless a number is set:
+
         badge.number = 99
     }
 }

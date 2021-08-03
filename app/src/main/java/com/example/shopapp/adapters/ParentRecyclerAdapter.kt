@@ -3,17 +3,12 @@ package com.example.shopapp.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.denzcoskun.imageslider.models.SlideModel
-import com.example.peliculasapp.adapters.CategoriaChildAdapter
-import com.example.peliculasapp.adapters.PeliculaChildAdapter
-import com.example.shopapp.DataOrException
+
 import com.example.shopapp.R
 import com.example.shopapp.databinding.CardviewBannerBinding
-import com.example.shopapp.databinding.CardviewCategoriaBinding
 import com.example.shopapp.databinding.ParentRecyclerviewCategoriasBinding
 import com.example.shopapp.databinding.ParentRecyclerviewItemsBinding
 import com.example.shopapp.entities.Categorias
@@ -29,7 +24,7 @@ import com.example.shopapp.entities.Productos
 class PeliculaAdapter(private val estructura: List<EstructuraRecyclerviewParent>, val peliculas: List<Productos> =  mutableListOf(),val categorias: List<Categorias> =  mutableListOf(),
                       val bannerArray: List<SlideModel>)
     : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
-    private lateinit var myAdapter: PeliculaChildAdapter
+    private lateinit var myAdapter: ProductoChildAdapter
     private lateinit var adapterCategoria: CategoriaChildAdapter
     companion object {
          const val TYPE_BANNER: Int = 0
@@ -71,7 +66,7 @@ class PeliculaAdapter(private val estructura: List<EstructuraRecyclerviewParent>
 
             binding.recyclerviewPeliculasChild.layoutManager = GridLayoutManager(itemView.context,1, RecyclerView.HORIZONTAL,false)
             binding.recyclerviewPeliculasChild.setHasFixedSize(true)
-            myAdapter= PeliculaChildAdapter(peliculas)
+            myAdapter= ProductoChildAdapter(peliculas)
             binding.recyclerviewPeliculasChild.adapter = myAdapter
         }
     }

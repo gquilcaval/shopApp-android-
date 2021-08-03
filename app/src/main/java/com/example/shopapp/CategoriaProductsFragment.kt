@@ -8,19 +8,16 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.peliculasapp.adapters.CategoriaChildAdapter
-import com.example.peliculasapp.adapters.PeliculaChildAdapter
-import com.example.shopapp.adapters.PeliculaAdapter
+
+import com.example.shopapp.adapters.ProductoChildAdapter
 import com.example.shopapp.databinding.FragmentCategoriaProductsBinding
-import com.example.shopapp.databinding.FragmentInicioBinding
-import com.example.shopapp.entities.Categorias
 import com.example.shopapp.entities.Productos
 import com.google.firebase.firestore.*
 
 
 class CategoriaProductsFragment : Fragment() {
     var productos: ArrayList<Productos> = arrayListOf()
-    private lateinit var myAdapter: PeliculaChildAdapter
+    private lateinit var myAdapter: ProductoChildAdapter
 
     var nombreCategoria:String? = ""
 
@@ -48,7 +45,7 @@ class CategoriaProductsFragment : Fragment() {
 
 
 
-        myAdapter = PeliculaChildAdapter(productos)
+        myAdapter = ProductoChildAdapter(productos)
         binding.recyclerviewProductos.adapter = myAdapter
 
         binding.btnBack.setOnClickListener {

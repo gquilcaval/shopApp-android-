@@ -43,7 +43,7 @@ class DialogDetail : DialogFragment() {
     override fun getTheme(): Int {
         return R.style.DialogTheme
     }
-    /** The system calls this only when creating the layout in a dialog. */
+
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 
 
